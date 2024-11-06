@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Gears</title>
+
+    <!-- Babylon.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+    <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+    <script src="https://cdn.babylonjs.com/recast.js"></script>
+    <script src="https://cdn.babylonjs.com/ammo.js"></script>
+    <script src="https://cdn.babylonjs.com/havok/HavokPhysics_umd.js"></script>
+    <script src="https://cdn.babylonjs.com/cannon.js"></script>
+    <script src="https://cdn.babylonjs.com/Oimo.js"></script>
+    <script src="https://cdn.babylonjs.com/earcut.min.js"></script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+    <script src="https://cdn.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+    <script src="https://cdn.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+    <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+    <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <script src="https://cdn.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="canvasZone"><canvas id="renderCanvas"></canvas></div>
+    <header id="header">
+      <div id="topPart">
+        <img width="150" height="100" src="gkn-au-stacked.svg" alt="icon" id="icon" />
+        <!-- <div id="linkAndSerch">
+          <a href="/">Contact</a><a href="/">Careers</a>
+
+          <button></button>
+        </div> -->
+      </div>
+    </header>
+    <div id="desBox">
+      <div id="desVideoBox">
+        <video width="100%" height="auto" controls>
+          <source src="ERADtext3-short.mp4" type="video/mp4" />
+
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div id="desTextBox">
+        <h2>EDD - Electronical Disconnect Differential</h2>
+        <div>
+          The EDD is used in electrical driven secondary axle of axle split hybrids or battery
+          electric AWD cars. The EDD is located inside the final drive, disconnecting the wheels
+          from the final drive, when AWD or hybrid function is not demanded, for maximum efficiency
+          gain.
+        </div>
+        <h3>Key Features</h3>
+        <ul>
+          <li>Dog clutch for torque transfer</li>
+          <li>Electro-magnetic actuator</li>
+          <li>Software control of the E-Motor for shifting process</li>
+          <li>Identification of the clutch status</li>
+        </ul>
+
+        <h3>Key Technical Data</h3>
+        <ul>
+          <li>Torque transfer 2500 Nm</li>
+          <li>Vehicle speed no limit</li>
+          <li>Max. drag torque, open 2 Nm</li>
+          <li>Current, closed 1.2 A</li>
+          <li>Mech. shifting time < 70 ms</li>
+        </ul>
+      </div>
+    </div>
+    <button id="cameraBtn">
+      <img
+        width="50"
+        height="50"
+        src="https://img.icons8.com/ios-filled/50/camera--v3.png"
+        alt="camera--v3"
+      />
+    </button>
+    <button id="openBtn">
+      <img
+        width="50"
+        height="50"
+        src="https://img.icons8.com/ios-filled/50/split-files.png"
+        alt="split-files"
+      />
+    </button>
+    <button id="playBtn">
+      <img
+        width="64"
+        height="64"
+        src="https://img.icons8.com/sf-black-filled/64/play.png"
+        alt="play"
+      />
+    </button>
+
+    <script src="main.js"></script>
+  </body>
+</html>

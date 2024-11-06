@@ -1,0 +1,170 @@
+html,
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Univia Pro";
+  src: local("Univia Pro Light"), local("Univia-Pro-Light"),
+    url("font/UniviaPro-Light.woff2") format("woff2"),
+    url("font/UniviaPro-Light.woff") format("woff"),
+    url("font/UniviaPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+#renderCanvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  /* transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out; */
+}
+
+#canvasZone {
+  width: 100%;
+  height: 100%;
+  background-color: #1a2d44;
+}
+
+#desBox {
+  width: 20vw;
+  height: 92vh;
+  position: absolute;
+  top: 8vh;
+  left: 80vw;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Univia Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  color: #333;
+  transition-property: left;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  visibility: hidden;
+}
+
+#desVideoBox {
+  height: 30%;
+  width: 100%;
+  background-color: #2b5689;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+#desTextBox {
+  height: 70%;
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+#desTextBox li {
+  margin-bottom: 5px;
+}
+
+#desTextBox h3 {
+  align-self: flex-start;
+}
+
+#cameraBtn {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 85vh;
+  left: 5rem;
+  background-color: #fc3;
+  border: solid #cfcfcf 5px;
+  padding: 2rem;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfcfcf;
+  border-radius: 5rem;
+}
+
+#openBtn {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 85vh;
+  left: 12rem;
+  background-color: #fc3;
+  border: solid #cfcfcf 5px;
+  padding: 2rem;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfcfcf;
+  border-radius: 5rem;
+}
+
+#playBtn {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 85vh;
+  left: 19rem;
+  background-color: #fc3;
+  border: solid #cfcfcf 5px;
+  padding: 2rem;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfcfcf;
+  border-radius: 5rem;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8vh;
+  width: 100vw;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Univia Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+#header a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Univia Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  color: #333;
+}
+
+#topPart {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
