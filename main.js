@@ -34,8 +34,11 @@ const createScene = () => {
   camera.wheelDeltaPercentage = 0.01;
   camera.position = new BABYLON.Vector3(0.19522278690950212, 0.32460103474098906, 2.34558162546303);
   scene.activeCamera.panningSensibility = 3000;
-  camera.pinchPrecision = 100;
+  camera.pinchPrecision = 50;
   camera.minZ = 0;
+  camera.lowerRadiusLimit = 1;
+  camera.upperRadiusLimit = 6;
+
 
   const meshAlpha = new BABYLON.Animation(
     "meshAlpha",
