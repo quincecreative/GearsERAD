@@ -351,34 +351,34 @@ const createScene = () => {
     // }
   });
 
-  document.getElementById("playBtn").addEventListener("click", function () {
-    if (!opened) {
-      for (let i = 0; i < meshe.length; i++) {
-        if (meshe[i].name == "7410480471_CATPART__A_1") {
-          if (meshe[i].visibility != 0) {
-            scene.beginDirectAnimation(meshe[i], [meshAlpha], 1, 60, false);
-          } else {
-            scene.beginDirectAnimation(meshe[i], [meshAlpha], 60, 1, false);
-          }
-        }
-      }
+  // document.getElementById("playBtn").addEventListener("click", function () {
+  //   if (!opened) {
+  //     for (let i = 0; i < meshe.length; i++) {
+  //       if (meshe[i].name == "7410480471_CATPART__A_1") {
+  //         if (meshe[i].visibility != 0) {
+  //           scene.beginDirectAnimation(meshe[i], [meshAlpha], 1, 60, false);
+  //         } else {
+  //           scene.beginDirectAnimation(meshe[i], [meshAlpha], 60, 1, false);
+  //         }
+  //       }
+  //     }
 
-      for (let i = 0; i < animationGroup.length; i++) {
-        if (
-          animationGroup[i].name.indexOf("Rotation") != -1 &&
-          animationGroup[i].name.indexOf("RotationTycanGear5") == -1 &&
-          animationGroup[i].name.indexOf("RotationTycanGear7") == -1 &&
-          animationGroup[i].name.indexOf("RotationTycanGear8") == -1
-        ) {
-          if (animationGroup[i].isStarted) {
-            animationGroup[i].stop();
-          } else {
-            animationGroup[i].start(true, 1, 1, animationGroup[i].to);
-          }
-        }
-      }
-    }
-  });
+  //     for (let i = 0; i < animationGroup.length; i++) {
+  //       if (
+  //         animationGroup[i].name.indexOf("Rotation") != -1 &&
+  //         animationGroup[i].name.indexOf("RotationTycanGear5") == -1 &&
+  //         animationGroup[i].name.indexOf("RotationTycanGear7") == -1 &&
+  //         animationGroup[i].name.indexOf("RotationTycanGear8") == -1
+  //       ) {
+  //         if (animationGroup[i].isStarted) {
+  //           animationGroup[i].stop();
+  //         } else {
+  //           animationGroup[i].start(true, 1, 1, animationGroup[i].to);
+  //         }
+  //       }
+  //     }
+  //   }
+  // });
 
   let animationGroupS = new BABYLON.AnimationGroup("GroupS");
   // let animationGroupA = new BABYLON.AnimationGroup("GroupA");
