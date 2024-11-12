@@ -406,7 +406,8 @@ const createScene = () => {
 
         if (meshes[i].name == "7010542778_primitive1") {
           sphereTargetHousing.parent = meshes[i];
-          // sphereTargetHousing.position.z = -0.12;
+         sphereTargetHousing.position.z = -0.04;
+          sphereTargetHousing.position.y = 0.03;
 
           // console.log("Mesh position:", meshes[i].position);
           // console.log("Mesh bounding info:", meshes[i].getBoundingInfo().boundingBox);
