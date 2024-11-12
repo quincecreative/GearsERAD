@@ -415,6 +415,12 @@ const createScene = () => {
           target2.linkWithMesh(sphereTargetHousing);
           // target2.linkOffsetY = -150;
         }
+
+        if (meshes[i].name == "7010542776_primitive0") {
+         
+          target1.linkWithMesh(meshes[i]);
+          // target2.linkOffsetY = -150;
+        }
       }
 
       // let { min, max } = meshes[0].getHierarchyBoundingVectors();
@@ -441,7 +447,7 @@ const createScene = () => {
       // animationGroupA.normalize(0, 120);
       animationGroupS.normalize(0, 250);
 
-      target1.linkWithMesh(meshes[1]);
+    
       // animationGroupA.stop();
       // animationGroupS.stop();
       animationGroups[0].stop();
