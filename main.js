@@ -388,11 +388,12 @@ const createScene = () => {
   BABYLON.SceneLoader.ImportMesh(
     "",
     "",
-    "85 Size ASM GearRotation1.glb",
+    "85 Size ASM (NovaAnimacija).glb",
     scene,
     (meshes, particleSystem, skeleton, animationGroups) => {
       meshes[0].scaling = new BABYLON.Vector3(27, 27, 27);
       meshes[0].position = new BABYLON.Vector3(0, -0.1, 0);
+      meshes[0].rotation = new BABYLON.Vector3(0.2, 0.5, 0);
 
       animationGroup = animationGroups;
 
