@@ -187,13 +187,41 @@ const createScene = () => {
   target1.height = "60px";
   // target.color = "#cfcfcf";
   target1.thickness = 0;
-  target1.background = "#fc3";
+  target1.background = "#2b5689";
   target1.alpha = 1;
 
   advancedTexture.addControl(target1);
 
+  let target11 = new BABYLON.GUI.Rectangle();
+  target11.width = "40px";
+  target11.cornerRadius = 40;
+  target11.height = "40px";
+  // target.color = "#cfcfcf";
+  target11.thickness = 0;
+  target11.background = "#154073";
+  target11.alpha = 1;
+
+  target11._localDraw = (function () {
+    let image = new Image();
+    image.src = "Cheveron_process copy-frei.png";
+    // image.addEventListener("load", () => {
+    //   stackPanel._markAsDirty();
+    // });
+    return function (context) {
+      context.drawImage(
+        image,
+        this._currentMeasure.left,
+        this._currentMeasure.top,
+        this._currentMeasure.width,
+        this._currentMeasure.height
+      );
+    };
+  })();
+
+  target1.addControl(target11);
+
   let text1 = new BABYLON.GUI.TextBlock();
-  text1.text = "X";
+  text1.text = "";
   text1.color = "black";
   text1.fontSize = "30px";
   text1.fontWeight = 500;
@@ -201,31 +229,25 @@ const createScene = () => {
   target1.addControl(text1);
 
   let desBox = document.getElementById("desBox");
-  desBox.style.left = "100vw";
+  let desBoxText = document.getElementById("desTextBox");
 
-  target1.onPointerEnterObservable.add(() => {
-    target1.width = "180px";
-    text1.text = "X Gear Set";
-  });
-  target1.onPointerOutObservable.add(() => {
-    target1.width = "60px";
-    text1.text = "X";
-  });
+  // target1.onPointerEnterObservable.add(() => {
+  //     target1.width = "180px";
+  //     text1.text = " Gear Set";
+  // });
+  // target1.onPointerOutObservable.add(() => {
+  //     target1.width = "60px";
+  //     text1.text = "";
+  // });
 
   target1.onPointerClickObservable.add(() => {
-    desBox.style.visibility = "visible";
-    console.log(desBox.style.left);
-    if (desBox.style.left == "100vw") {
-      // desBox.style.display = "flex";
-      desBox.style.left = "80vw";
-      // canvasZone.style.width = "80%";
-      // engine.resize();
-    } else {
-      // canvasZone.style.width = "100%";
-      desBox.style.left = "100vw";
-      // engine.resize();
-      // desBox.style.display = "none";
-    }
+    desBoxText.innerHTML =
+      " <h2>Gear Set</h2><ul><li>GKN Automotive products cover the required torque range for passenger and light commercial vehicles, independent of propulsion system.</li><li>Available bevel gear sizes range from a spherical diameter of 64mm to 120mm.</li><li>Tooth counts allow to assemble as 2-pinion or 4-pinion variants.</li ><li>Flat-back side gear design enables lowest backlash and the option of selective shimming, while providing the smallest bearing span</li> </ul>";
+    // desBox.style.visibility = "visible";
+    // console.log(desBox.style.left);
+
+    // canvasZone.style.width = "100%";
+    desBox.style.zIndex = 101;
   });
   let target2 = new BABYLON.GUI.Rectangle();
   target2.width = "60px";
@@ -233,42 +255,64 @@ const createScene = () => {
   target2.height = "60px";
   // target.color = "#cfcfcf";
   target2.thickness = 0;
-  target2.background = "#fc3";
+  target2.background = "#2b5689";
   target2.alpha = 1;
 
   advancedTexture.addControl(target2);
 
+  let target22 = new BABYLON.GUI.Rectangle();
+  target22.width = "40px";
+  target22.cornerRadius = 40;
+  target22.height = "40px";
+  // target.color = "#cfcfcf";
+  target22.thickness = 0;
+  target22.background = "#154073";
+  target22.alpha = 1;
+
+  target22._localDraw = (function () {
+    let image = new Image();
+    image.src = "Cheveron_process copy-frei.png";
+    // image.addEventListener("load", () => {
+    //   stackPanel._markAsDirty();
+    // });
+    return function (context) {
+      context.drawImage(
+        image,
+        this._currentMeasure.left,
+        this._currentMeasure.top,
+        this._currentMeasure.width,
+        this._currentMeasure.height
+      );
+    };
+  })();
+
+  target2.addControl(target22);
+
   let text2 = new BABYLON.GUI.TextBlock();
-  text2.text = "X";
+  text2.text = "";
   text2.color = "black";
   text2.fontSize = "30px";
   text2.fontWeight = 500;
 
   target2.addControl(text2);
 
-  target2.onPointerEnterObservable.add(() => {
-    target2.width = "180px";
-    text2.text = "X Housing";
-  });
-  target2.onPointerOutObservable.add(() => {
-    target2.width = "60px";
-    text2.text = "X";
-  });
+  // target2.onPointerEnterObservable.add(() => {
+  //     target2.width = "180px";
+  //     text2.text = " Housing";
+  // });
+  // target2.onPointerOutObservable.add(() => {
+  //     target2.width = "60px";
+  //     text2.text = "";
+  // });
 
   target2.onPointerClickObservable.add(() => {
-    desBox.style.visibility = "visible";
-    console.log(desBox.style.left);
-    if (desBox.style.left == "100vw") {
-      // desBox.style.display = "flex";
-      desBox.style.left = "80vw";
-      // canvasZone.style.width = "80%";
-      // engine.resize();
-    } else {
-      // canvasZone.style.width = "100%";
-      desBox.style.left = "100vw";
-      // engine.resize();
-      // desBox.style.display = "none";
-    }
+    desBoxText.innerHTML =
+      " <h2>Housing</h2><ul><li>Our state-of-the-art differential housings can be tailored to meet the required customer packaging spaces and interface dimensions.</li><li>Available variants <ul><li>Single-piece housing for 2-pinion layouts</li><li>Two-piece housing for 4-pinion layouts</li><li>AWD variants with internal or external splines for PTU connection</li><li>Differential integrated into planetary carriers.</li></ul></li><li>Final drive gears can be welded or bolted, depending on customer preferences</li ></ul>";
+    // desBox.style.visibility = "visible";
+    // console.log(desBox.style.left);
+
+    // canvasZone.style.width = "100%";
+    desBox.style.zIndex = 101;
   });
   //   let br = 1;
   // target.onPointerClickObservable.add(() => {
@@ -287,6 +331,8 @@ const createScene = () => {
 
   let animationGroup;
   let meshe;
+  target1.alpha = 0;
+  target2.alpha = 0;
 
   document.getElementById("openBtn").addEventListener("click", function () {
     // animationGroupA.stop();
@@ -304,6 +350,9 @@ const createScene = () => {
     }
 
     if (opened) {
+      desBox.style.zIndex = 0;
+      //   target1.alpha = 0;
+      //   target2.alpha = 0;
       // animationGroups[0].stop();
       if (animationGroupS.isStarted) {
         let masterFrame = animationGroupS.animatables[0].masterFrame;
@@ -324,6 +373,8 @@ const createScene = () => {
 
       opened = false;
     } else {
+      //   target1.alpha = 1;
+      //   target2.alpha = 1;
       // animationGroups[0].play();
 
       if (animationGroupS.isStarted) {
@@ -406,7 +457,7 @@ const createScene = () => {
 
         if (meshes[i].name == "7010542778_primitive1") {
           sphereTargetHousing.parent = meshes[i];
-         sphereTargetHousing.position.z = -0.04;
+          sphereTargetHousing.position.z = -0.04;
           sphereTargetHousing.position.y = 0.03;
 
           // console.log("Mesh position:", meshes[i].position);
@@ -418,7 +469,6 @@ const createScene = () => {
         }
 
         if (meshes[i].name == "7010542776_primitive0") {
-         
           target1.linkWithMesh(meshes[i]);
           // target2.linkOffsetY = -150;
         }
@@ -448,7 +498,6 @@ const createScene = () => {
       // animationGroupA.normalize(0, 120);
       animationGroupS.normalize(0, 250);
 
-    
       // animationGroupA.stop();
       // animationGroupS.stop();
       animationGroups[0].stop();
@@ -465,6 +514,26 @@ const createScene = () => {
       // for (let i = 0; i < meshes.length; i++) {
       //   meshes[i].material = yellowMat;
       // }
+
+      scene.onBeforeRenderObservable.add(() => {
+        if (opened) {
+          if (target1.alpha < 1) {
+            console.log(target1.alpha);
+            target1.alpha += 0.05;
+            target2.alpha += 0.05;
+          }
+        } else if (target1.alpha > 0) {
+          console.log(target1.alpha);
+          target1.alpha -= 0.05;
+          target2.alpha -= 0.05;
+
+          if (target1.alpha < 0.01) {
+            target1.alpha = 0;
+            target2.alpha = 0;
+          }
+        }
+      });
+
       scene.onPointerObservable.add((pointerInfo) => {
         // switch (pointerInfo.type) {
         //   case BABYLON.PointerEventTypes.POINTERPICK:
