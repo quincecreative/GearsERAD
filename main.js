@@ -307,7 +307,7 @@ const createScene = () => {
 
   target2.onPointerClickObservable.add(() => {
     desBoxText.innerHTML =
-      " <h2>Housing</h2><ul><li>Our state-of-the-art differential housings can be tailored to meet the required customer packaging spaces and interface dimensions.</li><li>Available variants <ul><li>Single-piece housing for 2-pinion layouts</li><li>Two-piece housing for 4-pinion layouts</li><li>AWD variants with internal or external splines for PTU connection</li><li>Differential integrated into planetary carriers.</li></ul></li><li>Final drive gears can be welded or bolted, depending on customer preferences</li ></ul>";
+      " <h2>Housing</h2><ul><li>Our state-of-the-art differential housings can be tailored to meet the required customer packaging spaces and interface dimensions.</li><li>Available variants : <ul><li>Single-piece housing for 2-pinion layouts</li><li>Two-piece housing for 4-pinion layouts</li><li>AWD variants with internal or external splines for PTU connection</li><li>Differential integrated into planetary carriers.</li></ul></li><li>Final drive gears can be welded or bolted, depending on customer preferences</li ></ul>";
     // desBox.style.visibility = "visible";
     // console.log(desBox.style.left);
 
