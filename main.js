@@ -242,7 +242,7 @@ const createScene = () => {
 
   target1.onPointerClickObservable.add(() => {
     desBoxText.innerHTML =
-      " <h2>Gear Set</h2><ul><li>GKN Automotive products cover the required torque range for passenger and light commercial vehicles, independent of propulsion system.</li><li>Available bevel gear sizes range from a spherical diameter of 64mm to 120mm.</li><li>Tooth counts allow to assemble as 2-pinion or 4-pinion variants.</li ><li>Flat-back side gear design enables lowest backlash and the option of selective shimming, while providing the smallest bearing span</li> </ul>";
+      " <h2>Gear Set</h2><ul><li>Our products cover the required torque range for passenger and light commercial vehicles, independent of propulsion systems</li><li>Available bevel gear sizes range from a spherical diameter of 64mm to 120mm.</li><li>Tooth counts allow to assemble as 2-pinion or 4-pinion variants.</li ><li>Flat-back side gear design enables lowest backlash and the option of selective shimming, while providing the smallest bearing span</li> </ul>";
     // desBox.style.visibility = "visible";
     // console.log(desBox.style.left);
 
