@@ -158,8 +158,8 @@ body {
 }
 
 #openBtn {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     position: absolute;
     top: 85vh;
     left: 12rem;
@@ -175,8 +175,8 @@ body {
 }
 
 #playBtn {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     position: absolute;
     top: 85vh;
     left: 19rem;
