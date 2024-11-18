@@ -187,7 +187,7 @@ const createScene = () => {
   target1.height = "60px";
   // target.color = "#cfcfcf";
   target1.thickness = 0;
-  target1.background = "#2b5689";
+  target1.background = "1a2b42";
   target1.alpha = 1;
 
   advancedTexture.addControl(target1);
@@ -255,7 +255,7 @@ const createScene = () => {
   target2.height = "60px";
   // target.color = "#cfcfcf";
   target2.thickness = 0;
-  target2.background = "#2b5689";
+  target2.background = "1a2b42";
   target2.alpha = 1;
 
   advancedTexture.addControl(target2);
