@@ -247,7 +247,7 @@ const createScene = () => {
       " <h2>Gear Set</h2><ul><li>Our products cover the required torque range for passenger and light commercial vehicles, independent of propulsion systems</li><li>Available bevel gear sizes range from a spherical diameter of 64mm to 120mm</li><li>Tooth counts allows for assemblly as 2-pinion or 4-pinion variants</li ><li>Flat-back side gear design enables lowest backlash and the option of selective shimming, while providing the smallest bearing span.</li> </ul>";
     // desBox.style.visibility = "visible";
     // console.log(desBox.style.left);
-    image.src = "gear.JPG";
+   image.src = "gear.JPG";
 
     // canvasZone.style.width = "100%";
     desBox.style.zIndex = 101;
