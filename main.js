@@ -148,18 +148,7 @@ const createScene = () => {
   let opened = false;
 
   let advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
-  document.getElementById("cameraBtn").addEventListener("click", function () {
-    console.log(camera.position);
-    if (opened) {
-      scene.beginDirectAnimation(camera, [cameraPA, cameraStartT], 1, 60, false);
-    } else {
-      scene.beginDirectAnimation(camera, [cameraStartP, cameraStartT], 1, 60, false);
-    }
-
-    console.log(camera.position);
-    // camera.target = new BABYLON.Vector3(0, 0, 0);
-    // console.log(camera._currentTarget);
-  });
+  
 
   // var rect1 = new BABYLON.GUI.Rectangle();
 
@@ -338,23 +327,10 @@ const createScene = () => {
   target1.alpha = 0;
   target2.alpha = 0;
 
-  document.getElementById("openBtn").addEventListener("click", function () {
-    // animationGroupA.stop();
-    for (let i = 0; i < animationGroup.length; i++) {
-      if (animationGroup[i].name.indexOf("Rotation") != -1) {
-        animationGroup[i].stop();
-      }
-    }
-    for (let i = 0; i < meshe.length; i++) {
-      if (meshe[i].name == "7410480471_CATPART__A_1") {
-        if (meshe[i].visibility == 0) {
-          scene.beginDirectAnimation(meshe[i], [meshAlpha], 60, 1, false);
-        }
-      }
-    }
-
+  document.getElementById("cameraBtn").addEventListener("click", function () {
+    console.log(camera.position);
     if (opened) {
-      desBox.style.zIndex = 0;
+       desBox.style.zIndex = 0;
       //   target1.alpha = 0;
       //   target2.alpha = 0;
       // animationGroups[0].stop();
@@ -376,6 +352,54 @@ const createScene = () => {
       // animationGroups[0].play();
 
       opened = false;
+      // scene.beginDirectAnimation(camera, [cameraPA, cameraStartT], 1, 60, false);
+    } else {
+      // scene.beginDirectAnimation(camera, [cameraStartP, cameraStartT], 1, 60, false);
+    }
+
+    console.log(camera.position);
+    // camera.target = new BABYLON.Vector3(0, 0, 0);
+    // console.log(camera._currentTarget);
+  });
+
+  document.getElementById("openBtn").addEventListener("click", function () {
+    // animationGroupA.stop();
+    for (let i = 0; i < animationGroup.length; i++) {
+      if (animationGroup[i].name.indexOf("Rotation") != -1) {
+        animationGroup[i].stop();
+      }
+    }
+    for (let i = 0; i < meshe.length; i++) {
+      if (meshe[i].name == "7410480471_CATPART__A_1") {
+        if (meshe[i].visibility == 0) {
+          scene.beginDirectAnimation(meshe[i], [meshAlpha], 60, 1, false);
+        }
+      }
+    }
+
+    if (opened) {
+      // desBox.style.zIndex = 0;
+      // //   target1.alpha = 0;
+      // //   target2.alpha = 0;
+      // // animationGroups[0].stop();
+      // if (animationGroupS.isStarted) {
+      //   let masterFrame = animationGroupS.animatables[0].masterFrame;
+      //   scene.beginDirectAnimation(camera, [cameraStartP], 1, 120, false);
+
+      //   animationGroupS.stop();
+
+      //   animationGroupS.start(false, 1, masterFrame, 1);
+      // } else {
+      //   scene.beginDirectAnimation(camera, [cameraStartP], 1, 120, false);
+
+      //   animationGroupS.stop();
+
+      //   animationGroupS.start(false, 1, animationGroupS.to, 1);
+      // }
+
+      // // animationGroups[0].play();
+
+      // opened = false;
     } else {
       //   target1.alpha = 1;
       //   target2.alpha = 1;
