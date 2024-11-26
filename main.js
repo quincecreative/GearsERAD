@@ -236,6 +236,7 @@ const createScene = () => {
   // });
 
   target1.onPointerClickObservable.add(() => {
+     if (opened) {
     desBoxText.innerHTML =
       " <h2>Gear Set</h2><ul><li>GKN Automotive products cover the required torque range for passenger and light commercial vehicles, independent of propulsion system</li><li>Available bevel gear sizes range from a spherical diameter of 64mm to 120mm</li ><li>Tooth counts allow to assemble as 2-pinion or 4-pinion variants</li><li>Flat-back side gear design enables lowest backlash and the option of selective shimming, while providing the smallest bearing span</li> </ul>";
     // desBox.style.visibility = "visible";
@@ -244,6 +245,7 @@ const createScene = () => {
 
     // canvasZone.style.width = "100%";
     desBox.style.zIndex = 101;
+     }
   });
   let target2 = new BABYLON.GUI.Rectangle();
   target2.width = "60px";
@@ -302,6 +304,7 @@ const createScene = () => {
   // });
 
   target2.onPointerClickObservable.add(() => {
+     if (opened) {
     desBoxText.innerHTML =
       " <h2>Housing</h2><ul><li>Our state-of-the-art differential housings can be tailored to meet the required customer packaging spaces and interface dimensions</li><li>Available variants : <ul><li>Single-piece housing for 2-pinion layouts</li><li>Two-piece housing for 4-pinion layouts</li><li>AWD variants with internal or external splines for PTU connection</li><li>Differential integrated into planetary carriers</li></ul></li><li>Final drive gears can be welded or bolted, depending on customer preferences</li></ul>";
     // desBox.style.visibility = "visible";
@@ -310,6 +313,7 @@ const createScene = () => {
 
     // canvasZone.style.width = "100%";
     desBox.style.zIndex = 101;
+     }
   });
   //   let br = 1;
   // target.onPointerClickObservable.add(() => {
