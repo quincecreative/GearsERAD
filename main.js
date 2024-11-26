@@ -114,7 +114,11 @@ const createScene = () => {
       value: new BABYLON.Vector3(camera.position.x, camera.position.y, camera.position.z),
     });
     keyFramesP.push({
-      frame: 180,
+      frame: 220,
+      value: new BABYLON.Vector3(camera.position.x, camera.position.y, camera.position.z),
+    });
+    keyFramesP.push({
+      frame: 320,
       value: new BABYLON.Vector3(0.43246934946106763, 0.8207297361144514, 5.930629857779956),
     });
     cameraStartP.setKeys(keyFramesP);
@@ -336,13 +340,13 @@ const createScene = () => {
       // animationGroups[0].stop();
       if (animationGroupS.isStarted) {
         let masterFrame = animationGroupS.animatables[0].masterFrame;
-        scene.beginDirectAnimation(camera, [cameraStartP], 1, 120, false);
+        scene.beginDirectAnimation(camera, [cameraStartP], 1, 320, false);
 
         animationGroupS.stop();
 
         animationGroupS.start(false, 1, masterFrame, 1);
       } else {
-        scene.beginDirectAnimation(camera, [cameraStartP], 1, 120, false);
+        scene.beginDirectAnimation(camera, [cameraStartP], 1, 320, false);
 
         animationGroupS.stop();
 
