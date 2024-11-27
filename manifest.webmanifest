@@ -1,0 +1,15 @@
+{
+  "background_color": "white",
+  "description": "openDifferential model",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "Icon.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    }
+  ],
+  "name": "openDifferential",
+  "short_name": "openDifferential",
+  "start_url": "/openDifferential/index.html"
+}

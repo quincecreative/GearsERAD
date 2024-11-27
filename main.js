@@ -152,7 +152,6 @@ const createScene = () => {
   let opened = false;
 
   let advancedTexture = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
-  
 
   // var rect1 = new BABYLON.GUI.Rectangle();
 
@@ -236,16 +235,16 @@ const createScene = () => {
   // });
 
   target1.onPointerClickObservable.add(() => {
-     if (opened) {
-    desBoxText.innerHTML =
-      " <h2>Gear Set</h2><ul><li>GKN Automotive products cover the required torque range for passenger and light commercial vehicles, independent of propulsion system</li><li>Available bevel gear sizes range from a spherical diameter of 64mm to 120mm</li ><li>Tooth counts allow to assemble as 2-pinion or 4-pinion variants</li><li>Flat-back side gear design enables lowest backlash and the option of selective shimming, while providing the smallest bearing span</li> </ul>";
-    // desBox.style.visibility = "visible";
-    // console.log(desBox.style.left);
-   image.src = "gear.JPG";
+    if (opened) {
+      desBoxText.innerHTML =
+        " <h2>Gear Set</h2><ul><li>GKN Automotive products cover the required torque range for passenger and light commercial vehicles, independent of propulsion system</li><li>Available bevel gear sizes range from a spherical diameter of 64mm to 120mm</li ><li>Tooth counts allow to assemble as 2-pinion or 4-pinion variants</li><li>Flat-back side gear design enables lowest backlash and the option of selective shimming, while providing the smallest bearing span</li> </ul>";
+      // desBox.style.visibility = "visible";
+      // console.log(desBox.style.left);
+      image.src = "gear.JPG";
 
-    // canvasZone.style.width = "100%";
-    desBox.style.zIndex = 101;
-     }
+      // canvasZone.style.width = "100%";
+      desBox.style.zIndex = 101;
+    }
   });
   let target2 = new BABYLON.GUI.Rectangle();
   target2.width = "60px";
@@ -304,16 +303,16 @@ const createScene = () => {
   // });
 
   target2.onPointerClickObservable.add(() => {
-     if (opened) {
-    desBoxText.innerHTML =
-      " <h2>Housing</h2><ul><li>Our state-of-the-art differential housings can be tailored to meet the required customer packaging spaces and interface dimensions</li><li>Available variants : <ul><li>Single-piece housing for 2-pinion layouts</li><li>Two-piece housing for 4-pinion layouts</li><li>AWD variants with internal or external splines for PTU connection</li><li>Differential integrated into planetary carriers</li></ul></li><li>Final drive gears can be welded or bolted, depending on customer preferences</li></ul>";
-    // desBox.style.visibility = "visible";
-    // console.log(desBox.style.left);
-     image.src = "housing.JPG";
+    if (opened) {
+      desBoxText.innerHTML =
+        " <h2>Housing</h2><ul><li>Our state-of-the-art differential housings can be tailored to meet the required customer packaging spaces and interface dimensions</li><li>Available variants : <ul><li>Single-piece housing for 2-pinion layouts</li><li>Two-piece housing for 4-pinion layouts</li><li>AWD variants with internal or external splines for PTU connection</li><li>Differential integrated into planetary carriers</li></ul></li><li>Final drive gears can be welded or bolted, depending on customer preferences</li></ul>";
+      // desBox.style.visibility = "visible";
+      // console.log(desBox.style.left);
+      image.src = "housing.JPG";
 
-    // canvasZone.style.width = "100%";
-    desBox.style.zIndex = 101;
-     }
+      // canvasZone.style.width = "100%";
+      desBox.style.zIndex = 101;
+    }
   });
   //   let br = 1;
   // target.onPointerClickObservable.add(() => {
@@ -338,7 +337,7 @@ const createScene = () => {
   document.getElementById("cameraBtn").addEventListener("click", function () {
     console.log(camera.position);
     if (opened) {
-       desBox.style.zIndex = 0;
+      desBox.style.zIndex = 0;
       //   target1.alpha = 0;
       //   target2.alpha = 0;
       // animationGroups[0].stop();
@@ -393,20 +392,14 @@ const createScene = () => {
       // if (animationGroupS.isStarted) {
       //   let masterFrame = animationGroupS.animatables[0].masterFrame;
       //   scene.beginDirectAnimation(camera, [cameraStartP], 1, 120, false);
-
       //   animationGroupS.stop();
-
       //   animationGroupS.start(false, 1, masterFrame, 1);
       // } else {
       //   scene.beginDirectAnimation(camera, [cameraStartP], 1, 120, false);
-
       //   animationGroupS.stop();
-
       //   animationGroupS.start(false, 1, animationGroupS.to, 1);
       // }
-
       // // animationGroups[0].play();
-
       // opened = false;
     } else {
       //   target1.alpha = 1;
@@ -665,26 +658,26 @@ const createScene = () => {
       });
     }
   );
-  let ssaoRatio = {
-    ssaoRatio: 0.5,
-    blurRatio: 1,
-  }; // Ratio of the SSAO post-process, in a lower resolution
+  // let ssaoRatio = {
+  //   ssaoRatio: 0.5,
+  //   blurRatio: 1,
+  // }; // Ratio of the SSAO post-process, in a lower resolution
 
-  let ssao = new BABYLON.SSAO2RenderingPipeline("ssao2", scene, ssaoRatio, [camera]);
-  ssao.totalStrength = 1.6;
-  ssao.base = 0;
-  ssao.radius = 1;
-  ssao.epsilon = 0.01;
-  ssao.samples = 25;
-  console.log(ssao);
-  scene.prePassRenderer.samples = 25;
+  // let ssao = new BABYLON.SSAO2RenderingPipeline("ssao2", scene, ssaoRatio, [camera]);
+  // ssao.totalStrength = 1.6;
+  // ssao.base = 0;
+  // ssao.radius = 1;
+  // ssao.epsilon = 0.01;
+  // ssao.samples = 25;
+  // console.log(ssao);
+  // scene.prePassRenderer.samples = 25;
 
-  let defaultRendering = new BABYLON.DefaultRenderingPipeline("defRend", true, scene);
+  // let defaultRendering = new BABYLON.DefaultRenderingPipeline("defRend", true, scene);
 
-  defaultRendering.fxaaEnabled = true;
-  defaultRendering.samples = 8;
+  // defaultRendering.fxaaEnabled = true;
+  // defaultRendering.samples = 8;
 
-  console.log(defaultRendering);
+  // console.log(defaultRendering);
 
   // // Attach camera to the SSAO render pipeline
   // scene.postProcessRenderPipelineManager.attachCamerasToRenderPipeline("ssao", camera);
