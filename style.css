@@ -1,221 +1,219 @@
 html,
 body {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "Helvetic Light";
-    src: local("Helvetic Light"), local("Helvetic-Light"), /* url("font/UniviaPro-Light.woff2") format("woff2"),
+  font-family: "Helvetic Light";
+  src: local("Helvetic Light"), local("Helvetic-Light"),
+    /* url("font/UniviaPro-Light.woff2") format("woff2"),
     url("font/UniviaPro-Light.woff") format("woff"), */
-    url("Helvetica Neue STD/Helvetica Neue LT Std/HelveticaNeueLTStd-Lt.otf") format("opentype");
-    font-style: normal;
+      url("Helvetica Neue STD/Helvetica Neue LT Std/HelveticaNeueLTStd-Lt.otf") format("opentype");
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Helvetic Bold";
-    src: local("Helvetic Bold"), local("Helvetic-Bold"), /* url("font/UniviaPro-Light.woff2") format("woff2"),
+  font-family: "Helvetic Bold";
+  src: local("Helvetic Bold"), local("Helvetic-Bold"),
+    /* url("font/UniviaPro-Light.woff2") format("woff2"),
     url("font/UniviaPro-Light.woff") format("woff"), */
-    url("Helvetica Neue STD/Helvetica Neue LT Std/HelveticaNeueLTStd-Bd.otf") format("opentype");
-    font-style: normal;
+      url("Helvetica Neue STD/Helvetica Neue LT Std/HelveticaNeueLTStd-Bd.otf") format("opentype");
+  font-style: normal;
 }
 
 #renderCanvas {
-    width: 100%;
-    height: 100%;
-    touch-action: none;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
 }
 
 #canvasZone {
-    width: 80%;
-    height: 100%;
-    background-color: #1a2b42;
+  width: 80%;
+  height: 100%;
+  background-color: #1a2d44;
 }
 
 #desBox {
-    width: 20%;
-    height: 92vh;
-    position: absolute;
-    top: 8vh;
-    left: 80vw;
-    background-color: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "Helvetic Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: #333;
-    /* transition-property: left;
+  width: 20%;
+  height: 92vh;
+  position: absolute;
+  top: 8vh;
+  left: 80vw;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Helvetic Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  /* transition-property: left;
   transition-duration: 1s;
   transition-timing-function: ease-in-out; */
-    /* visibility: hidden; */
+  /* visibility: hidden; */
 }
 
 #desVideoBox {
-    height: 30%;
-    width: 100%;
-    background-color: #1a2b42;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 30%;
+  width: 100%;
+  background-color: #1a2b42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #desTextBox {
-    height: 70%;
-    width: 100%;
-    padding: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    overflow-y: scroll;
+  height: 70%;
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
 #desTextBox li {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 #desTextBox h2 {
-    align-self: flex-start;
-    font-family: "Helvetic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  align-self: flex-start;
+  font-family: "Helvetic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 #desBoxM {
-    width: 20%;
-    height: 92vh;
-    position: absolute;
-    top: 8vh;
-    left: 80vw;
-    background-color: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "Helvetic Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: #333;
-    /* transition-property: left;
+  width: 20%;
+  height: 92vh;
+  position: absolute;
+  top: 8vh;
+  left: 80vw;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Helvetic Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  /* transition-property: left;
   transition-duration: 1s;
   transition-timing-function: ease-in-out; */
-    /* visibility: hidden; */
-    z-index: 100;
+  /* visibility: hidden; */
+  z-index: 100;
 }
 
 #desTextBoxM {
-    height: 100%;
-    width: 100%;
-    padding: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    overflow-y: scroll;
-}
-
-#desVideoBoxM {
-    height: 30%;
-    width: 100%;
-    background-color: #2b5689;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
 #desTextBoxM li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 #desTextBoxM h2 {
-    font-family: "Helvetic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    align-self: flex-start;
+  font-family: "Helvetic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  align-self: flex-start;
 }
 
 #cameraBtn {
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    top: 85vh;
-    left: 5rem;
-    background-color: #fc3;
-    border: solid #cfcfcf 5px;
-    padding: 2rem;
-    font-size: large;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #cfcfcf;
-    border-radius: 5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  position: absolute;
+  top: 85dvh;
+  left: 2rem;
+  background-color: #fc3;
+  border: solid #cfcfcf 5px;
+  padding: 2rem;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfcfcf;
+  border-radius: 5rem;
 }
 
 #openBtn {
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    top: 85vh;
-    left: 12rem;
-    background-color: #fc3;
-    border: solid #cfcfcf 5px;
-    padding: 2rem;
-    font-size: large;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #cfcfcf;
-    border-radius: 5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  position: absolute;
+  top: 85dvh;
+  left: 7rem;
+  background-color: #fc3;
+  border: solid #cfcfcf 5px;
+  padding: 2rem;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfcfcf;
+  border-radius: 5rem;
 }
 
 #playBtn {
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    top: 85vh;
-    left: 19rem;
-    background-color: #fc3;
-    border: solid #cfcfcf 5px;
-    padding: 2rem;
-    font-size: large;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #cfcfcf;
-    border-radius: 5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  position: absolute;
+  top: 85dvh;
+  left: 12rem;
+  background-color: #fc3;
+  border: solid #cfcfcf 5px;
+  padding: 2rem;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfcfcf;
+  border-radius: 5rem;
 }
 
 #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 8vh;
-    width: 100vw;
-    background-color: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Helvetic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8vh;
+  width: 100vw;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Helvetic Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 #topPart {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: cener;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 #topPart h2 {
-    position: absolute;
-    top: 7vh;
-    left: 2vw;
-    font-size: 2.3em;
-    color: white;
+  position: absolute;
+  top: 7vh;
+  left: 2vw;
+  font-size: 2em;
+  color: white;
 }
